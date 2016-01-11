@@ -21,5 +21,6 @@
   <files>
 	<file src="bin\Release\Moq.EntityFramework.dll" />
 	<file src="bin\Release\Moq.EntityFramework.xml" />
+	<file src="NuSpec\*.ps1" target="tools" />
   </files>
 </package>
