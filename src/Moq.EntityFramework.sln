@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moq.EntityFramework", "Moq.EntityFramework\Moq.EntityFramework.csproj", "{6F9E96CB-6A6E-43D6-97BE-D999521A6B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moq.EntityFramework.Tests", "Moq.EntityFramework.Tests\Moq.EntityFramework.Tests.csproj", "{DB1A1E1F-FD53-44F9-BCE8-1A612F45B99D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F9E96CB-6A6E-43D6-97BE-D999521A6B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9E96CB-6A6E-43D6-97BE-D999521A6B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9E96CB-6A6E-43D6-97BE-D999521A6B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9E96CB-6A6E-43D6-97BE-D999521A6B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1A1E1F-FD53-44F9-BCE8-1A612F45B99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1A1E1F-FD53-44F9-BCE8-1A612F45B99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1A1E1F-FD53-44F9-BCE8-1A612F45B99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1A1E1F-FD53-44F9-BCE8-1A612F45B99D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
