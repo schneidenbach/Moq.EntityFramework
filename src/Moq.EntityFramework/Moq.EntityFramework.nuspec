@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Moq.EntityFramework</id>
+    <version>$version$</version>
+    <title>Moq.EntityFramework</title>
+    <authors>Spencer Schneidenbach</authors>
+    <owners>Spencer Schneidenbach</owners>
+    <licenseUrl>https://github.com/schneidsDotNet/Moq.EntityFramework/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/schneidsDotNet/Moq.EntityFramework</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Mock your Entity Framework contexts with ease.</summary>
+    <description>Mock your Entity Framework contexts with ease.</description>
+    <copyright>Copyright 2016</copyright>
+    <tags>EntityFramework Moq</tags>
+	<dependencies>
+	  <dependency id="EntityFramework" version="6.0.0" />
+	  <dependency id="Moq" version="4.2.1510.2205" />
+	</dependencies>
+  </metadata>
+  <files>
+	<file src="bin\Release\Moq.EntityFramework.dll" />
+	<file src="bin\Release\Moq.EntityFramework.xml" />
+  </files>
+</package>

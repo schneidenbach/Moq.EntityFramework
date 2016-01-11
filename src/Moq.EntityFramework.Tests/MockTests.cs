@@ -39,7 +39,7 @@ namespace Moq.EntityFramework.Tests
             Assert.That(count, Is.EqualTo(100));
         }
 
-        [Test]
+        [Test, Category("Ignore")]
         public void TestFind()
         {
             var person = ContextMock.MockedSet<Person>().Object.Find(3);
