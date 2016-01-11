@@ -65,15 +65,34 @@ namespace Moq.EntityFramework
             return this;
         }
 
+
         /// <summary>
         /// Mocks the set for a given type.
         /// </summary>
         /// <typeparam name="TEntity">The type of the entity whose set should be mocked. If the set has already been mocked, returns the previously mocked set.</typeparam>
         /// <param name="entities">The entities you would like added to the DbSet.</param>
         /// <returns>Returns the MockDbContext.</returns>
-        public DbContextMock<TContext> MockSetFor<TEntity>(params TEntity[] entities)
+        public DbContextMock<TContext> MockSetFor<TEntity>(params TEntity[] entities) 
             where TEntity : class
         {
+            if (entities == null)
+                throw new ArgumentNullException(nameof(entities));
+
+            return MockSetFor(entities.AsEnumerable());
+        }
+
+        /// <summary>
+        /// Mocks the set for a given type.
+        /// </summary>
+        /// <typeparam name="TEntity">The type of the entity whose set should be mocked. If the set has already been mocked, returns the previously mocked set.</typeparam>
+        /// <param name="entities">The entities you would like added to the DbSet.</param>
+        /// <returns>Returns the MockDbContext.</returns>
+        public DbContextMock<TContext> MockSetFor<TEntity>(IEnumerable<TEntity> entities)
+            where TEntity : class
+        {
+            if (entities == null)
+                throw new ArgumentNullException(nameof(entities));
+
             var entityType = typeof(TEntity);
             EnsureEntityExistsAsSet(entityType);
 

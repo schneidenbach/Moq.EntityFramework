@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Moq.EntityFramework
 {
-    //borrowed from https://msdn.microsoft.com/en-gb/data/dn314429.aspx
+    //borrowed from https://msdn.microsoft.com/en-us/data/dn314429.aspx
     internal class TestDbAsyncQueryProvider<TEntity> : IDbAsyncQueryProvider
     {
         private readonly IQueryProvider _inner;
