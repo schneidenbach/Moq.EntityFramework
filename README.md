@@ -41,7 +41,8 @@ Inspired by code from https://msdn.microsoft.com/en-us/data/dn314429.aspx. The g
 	```
 
 ### Limitations
-As stated in the [blog post this repo is based on](https://msdn.microsoft.com/en-us/data/dn314429.aspx), any queries you do will default to using LINQ to Objects as opposed to LINQ to Entities.  This will sometimes result in different results based on your queries.
+* As stated in the [blog post this repo is based on](https://msdn.microsoft.com/en-us/data/dn314429.aspx), any queries you do will default to using LINQ to Objects as opposed to LINQ to Entities.  This will sometimes result in different results based on your queries.
+* Requires Entity Framework 6.  Untested with 7, would assume it would not work out of the box.
 
 ### TODOs
 * Better test coverage
