@@ -4,19 +4,27 @@ Mock your Entity Framework contexts with ease.
 Inspired by code from https://msdn.microsoft.com/en-us/data/dn314429.aspx. The goal of this repo is to take all the repetitive parts out of mocking a DbSet.  
 
 ### How to use
-1. Create your DbContext mock
+1. Create your DbContext.  (Make sure you mark your DbSets as virtual - Moq requires this in order to create a mock of your class!)
+
+	```
+	public class YourDbContext : DbContext
+	{
+		public virtual DbSet<Person> Persons { get; set; }
+	}
+	```
+2. Create your DbContext mock
 
 	```
 	var contextMock = DbContextMockFactory.Create<YourDbContext>();
 	```
-2. Add data to your set
+3. Add data to your set
 
 	```
 	var persons = Enumerable.Range(1, 100).Select(i => new Person {Id = i, Name = "Person " + i});
 	var setMock = contextMock.MockedSet<Person>(persons); 
 	```
 
-3. Write your tests (assumes using NUnit and we're testing ASP.NET controllers)
+4. Write your tests (assumes using NUnit and we're testing ASP.NET controllers)
 	```
 	public async Task GetTest()
 	{
