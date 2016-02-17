@@ -41,9 +41,10 @@ Inspired by code from https://msdn.microsoft.com/en-us/data/dn314429.aspx. The g
 	public async Task PostTest()
 	{
 		var controller = new PersonsController(contextMock.Object);
-		await controller.Post(new Person { Name = "John Lackey" });
+		var newPerson = new Person { Name = "John Lackey" };
+		await controller.Post(newPerson);
 		
-		setMock.Verify(s => s.Add(It.IsAny<Person>()), Times.Once());
+		setMock.Verify(s => s.Add(newPerson), Times.Once());
 		mockContext.Verify(c => c.SaveChangesAsync(), Times.Once());
 	}
 	```
